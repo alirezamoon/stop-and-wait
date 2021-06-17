@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Col, Row, Button } from "react-bootstrap";
 
-const LostFrame = () => {
+const LostAck = () => {
   const [reciever, setReciever] = useState([]);
   //   let reciever = [1];
   const [msgSender, setMsgSender] = useState([]);
@@ -42,16 +42,16 @@ const LostFrame = () => {
         setBg2("bg-warning");
       }, (time += 2000));
       setTimeout(() => {
-        //setReciever((p) => [...p, frame2]);
-        //setMsgReciever((p) => [...p, "frame2 recieved", "ack2 sent"]);
+        setReciever((p) => [...p, frame2]);
+        setMsgReciever((p) => [...p, "frame 2 recieved", "ack 3 sent"]);
       }, (time += 2000));
       setTimeout(() => {
         setMsgSender((p) => [...p, "time out frame 2", "sent frame 2 again"]);
         //setBg2("bg-success");
       }, (time += 3000));
       setTimeout(() => {
-        setReciever((p) => [...p, frame2]);
-        setMsgReciever((p) => [...p, "frame 2 recieved", "ack 3 sent"]);
+        // setReciever((p) => [...p, frame2]);
+        setMsgReciever((p) => [...p, "frame 2 has recieved", "ack 3 sent"]);
       }, (time += 2000));
       setTimeout(() => {
         setMsgSender((p) => [...p, "ack 3 recieved"]);
@@ -102,7 +102,7 @@ const LostFrame = () => {
   return (
     <>
       <Row className="text-light h3 py-1 m-0 bg-info">
-        <Col>Lost Frame</Col>
+        <Col>Lost Ack</Col>
       </Row>
       <Container>
         <Row className="mt-2">
@@ -193,4 +193,4 @@ const LostFrame = () => {
   );
 };
 
-export default LostFrame;
+export default LostAck;

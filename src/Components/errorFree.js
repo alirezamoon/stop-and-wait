@@ -29,12 +29,12 @@ const ErrorFree = () => {
       }, (time += 2000));
       setTimeout(() => {
         setReciever((p) => [...p, frame[0]]);
-        setMsgReciever((p) => [...p, `frame ${frame[0]} recieved`, `ack ${frame[0]} sent`]);
+        setMsgReciever((p) => [...p, `frame ${frame[0]} recieved`, `ack ${1+(+frame[0])} sent`]);
       }, (time += 2000));
       setTimeout(() => {
         frame[1]= 'bg-success'
         setFrames(newFrames)
-        setMsgSender((p) => [...p, `ack ${frame[0]} received`]);
+        setMsgSender((p) => [...p, `ack ${1+(+frame[0])} received`]);
       }, (time += 2000));
     });
   };
@@ -47,8 +47,8 @@ const ErrorFree = () => {
 
   return (
     <>
-      <Row className="text-danger h1 py-2 m-0">
-        <Col>** Stop And Wait **</Col>
+          <Row className="text-light h3 py-1 m-0 bg-info">
+        <Col>Error Free</Col>
       </Row>
       <Container>
         <Row className="mt-2">
@@ -63,10 +63,10 @@ const ErrorFree = () => {
           </Col>
         </Row>
         <Row>
-          <Col className="mt-5 border text-light bg-danger mx-5 py-2 rounded ">
+          <Col className="mt-2 border text-light bg-danger mx-5 py-2 rounded ">
             فرستنده
           </Col>
-          <Col className="mt-5 border text-light bg-danger mx-5 py-2 rounded ">
+          <Col className="mt-2 border text-light bg-danger mx-5 py-2 rounded ">
             گیرنده
           </Col>
         </Row>
