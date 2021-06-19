@@ -19,9 +19,7 @@ const ErrorFree = () => {
   const timeDev = () => {
     let time = 0;
     let newFrames = [...frames]
-    console.log(newFrames)
     newFrames.map((frame) => {
-      time += 2000;
       setTimeout(() => {
         frame[1]= 'bg-warning'
         setFrames(newFrames)
