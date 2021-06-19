@@ -8,7 +8,7 @@ const StopAndWait = () => {
     <Container>
       <Row className=" text-secondary h3 py-2 m-0 mt-5">
         <Col xs={12}>تمرین پیاده سازی</Col>
-        <Col xs={12}>درس انتقال داد ها - دکتر عابدی</Col>
+        <Col xs={12}>درس انتقال داده ها - دکتر عابدی</Col>
         <Col xs={12} className='rounded text-dark py-2 mt-5 bg-info'>** Stop And Wait **</Col>
       </Row>
       <Row xs={5} className="mt-5 justify-content-center">
